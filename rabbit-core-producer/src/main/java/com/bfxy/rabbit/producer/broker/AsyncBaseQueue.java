@@ -1,4 +1,4 @@
-package com.bfxy.base.rabbit.producer.broker;
+package com.bfxy.rabbit.producer.broker;
 
 import lombok.extern.slf4j.Slf4j;
 

@@ -1,10 +1,14 @@
-package com.bfxy.base.rabbit.producer.broker;
+package com.bfxy.rabbit.producer.broker;
 
 import com.bfxy.rabbit.api.Message;
 import com.bfxy.rabbit.api.MessageType;
 import com.bfxy.rabbit.api.exception.MessageRunTimeException;
+import com.bfxy.rabbit.common.convert.GenericMessageConverter;
+import com.bfxy.rabbit.common.convert.RabbitMessageConverter;
+import com.bfxy.rabbit.common.serializer.Serializer;
 import com.bfxy.rabbit.common.serializer.SerializerFactory;
 import com.bfxy.rabbit.common.serializer.impl.JacksonSerializerFactory;
+import com.bfxy.rabbit.producer.service.IMessageStoreService;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Maps;
@@ -28,14 +32,18 @@ import java.util.Map;
 @Component
 public class RabbitTemplateContainer implements RabbitTemplate.ConfirmCallback, RabbitTemplate.ReturnCallback {
 
+    @Autowired
+    private ConnectionFactory connectionFactory;
+
+    @Autowired
+    private IMessageStoreService messageStoreService;
+
     private Map<String, RabbitTemplate> rabbitMap = Maps.newConcurrentMap();
 
     private Splitter splitter = Splitter.on("#");
 
-    @Autowired
-    private ConnectionFactory connectionFactory;
-
     private SerializerFactory serializerFeature = JacksonSerializerFactory.INSTANCE;
+
 
     public RabbitTemplate getTemplate(Message message) throws MessageRunTimeException {
         Preconditions.checkNotNull(message);
@@ -51,8 +59,10 @@ public class RabbitTemplateContainer implements RabbitTemplate.ConfirmCallback, 
         newTemplate.setRoutingKey(message.getRoutingKey());
         newTemplate.setRetryTemplate(new RetryTemplate());
         //TODO 进行序列化message
-//        serializerFeature.create()
-//        newTemplate.setMessageConverter();
+        Serializer serializer = serializerFeature.create();
+        GenericMessageConverter gmc = new GenericMessageConverter(serializer);
+        RabbitMessageConverter rmc = new RabbitMessageConverter(gmc);
+        newTemplate.setMessageConverter(rmc);
         //迅速消息不需要进行确认
         String messageType = message.getMessageType();
         if (!MessageType.RAPID.equals(messageType)) {
@@ -72,7 +82,7 @@ public class RabbitTemplateContainer implements RabbitTemplate.ConfirmCallback, 
         if (ack) {
             // 	如果当前消息类型为reliant 我们就去数据库查找并进行更新
             if(MessageType.RELIANT.endsWith(messageType)) {
-//                this.messageStoreService.succuess(messageId);
+                this.messageStoreService.success(messageId);
             }
             log.info("send message is OK, confirm messageId: {}, sendTime: {}", messageId, sendTime);
         } else {

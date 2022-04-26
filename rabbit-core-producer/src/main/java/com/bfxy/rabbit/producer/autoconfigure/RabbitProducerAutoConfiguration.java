@@ -1,4 +1,4 @@
-package com.bfxy.base.rabbit.producer.autoconfigure;
+package com.bfxy.rabbit.producer.autoconfigure;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

@@ -49,7 +49,7 @@ public class JacksonSerializer implements Serializer {
     public static JacksonSerializer createParametricType(Class<?> cls) {
         return new JacksonSerializer(mapper.getTypeFactory().constructType(cls));
     }
-
+    @Override
     public byte[] serializeRaw(Object data) {
         try {
             return mapper.writeValueAsBytes(data);
@@ -58,7 +58,7 @@ public class JacksonSerializer implements Serializer {
         }
         return null;
     }
-
+    @Override
     public String serialize(Object data) {
         try {
             return mapper.writeValueAsString(data);
@@ -67,7 +67,7 @@ public class JacksonSerializer implements Serializer {
         }
         return null;
     }
-
+    @Override
     public <T> T deserialize(String content) {
         try {
             return mapper.readValue(content, type);
@@ -76,7 +76,7 @@ public class JacksonSerializer implements Serializer {
         }
         return null;
     }
-
+    @Override
     public <T> T deserialize(byte[] content) {
         try {
             return mapper.readValue(content, type);

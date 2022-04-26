@@ -1,4 +1,4 @@
-package com.bfxy.base.rabbit.producer.broker;
+package com.bfxy.rabbit.producer.broker;
 
 import com.bfxy.rabbit.api.Message;
 import com.bfxy.rabbit.api.MessageProducer;
@@ -32,8 +32,10 @@ public class ProducerClient implements MessageProducer {
                 rabbitBroker.rapidSend(message);
                 break;
             case MessageType.CONFIRM:
+                rabbitBroker.confirmSend(message);
                 break;
             case MessageType.RELIANT:
+                rabbitBroker.reliantSend(message);
                 break;
             default:
                 break;
@@ -43,7 +45,11 @@ public class ProducerClient implements MessageProducer {
 
     @Override
     public void send(List<Message> messages) throws MessageRunTimeException {
-
+        messages.forEach(message -> {
+            message.setMessageType(MessageType.CONFIRM);
+            MessageHolder.add(message);
+        });
+        rabbitBroker.sendMessages();
     }
 
     @Override
