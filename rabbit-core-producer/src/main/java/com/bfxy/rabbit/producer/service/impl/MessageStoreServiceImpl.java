@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @Author Mengdexin
@@ -36,4 +37,20 @@ public class MessageStoreServiceImpl implements IMessageStoreService {
                 BrokerMessageStatus.SEND_OK.getCode(),
                 new Date());
     }
+
+    @Override
+    public List<BrokerMessage> queryFailMessage(String code) {
+        return brokerMessageMapper.selectFailMessage(code);
+    }
+
+    @Override
+    public int updateFileStatus(String messageId, String code) {
+        return brokerMessageMapper.updateMessageStatus(messageId, code, new Date());
+    }
+
+    @Override
+    public int updateTryCount(String messageId) {
+        return brokerMessageMapper.updateTryCount(messageId);
+    }
+
 }

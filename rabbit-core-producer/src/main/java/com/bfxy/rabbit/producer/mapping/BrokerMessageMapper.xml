@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.bfxy.rabbit.producer.mapper.BrokerMessageMapper" >
     <sql id="Base_Column_list">
-        message_id, message, try_count, status, next_retry, create_time, update_time,
+        message_id, message, try_count, status, next_retry, create_time, update_time
     </sql>
     <resultMap id="BaseResultMap" type="com.bfxy.rabbit.producer.entity.BrokerMessage">
         <id column="message_id" property="messageId" jdbcType="VARCHAR" />
@@ -34,4 +34,20 @@
                 bm.update_time = #{date, jdbcType=TIMESTAMP}
             where bm.message_id = #{messageId,jdbcType=VARCHAR}
     </update>
+    <select id="selectFailMessage" resultMap="BaseResultMap">
+        <![CDATA[
+        select * from broker_message
+        where status = #{status}
+        and next_retry < sysdate();
+         ]]>
+    </select>
+    <update id="updateTryCount">
+        <![CDATA[
+        update broker_message
+            set try_count = try_count + 1,
+                update_time = sysdate()
+        where message_id = #{messageId};
+         ]]>
+    </update>
+
 </mapper>

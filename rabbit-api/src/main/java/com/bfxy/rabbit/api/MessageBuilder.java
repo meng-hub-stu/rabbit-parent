@@ -76,4 +76,12 @@ public class MessageBuilder {
         return message;
     }
 
+    //使用建造者的模式
+    public static void main(String[] args) throws ClassNotFoundException {
+        Message build = MessageBuilder.create()
+                .withAttribute("", "")
+                .withDelayMills(1)
+                .build();
+    }
+
 }

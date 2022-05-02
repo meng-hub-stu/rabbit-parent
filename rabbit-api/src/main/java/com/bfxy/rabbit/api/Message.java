@@ -3,7 +3,6 @@ package com.bfxy.rabbit.api;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -17,7 +16,6 @@ import java.util.Map;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
 public class Message implements Serializable {
 
     private static final long serialVersionUID = 841277940410721237L;
