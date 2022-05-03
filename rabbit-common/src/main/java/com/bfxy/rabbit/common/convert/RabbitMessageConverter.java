@@ -25,6 +25,8 @@ public class RabbitMessageConverter implements MessageConverter {
     public Message toMessage(Object o, MessageProperties messageProperties) throws MessageConversionException {
         //修饰者设计模式可以增加一些自己想要设置的参数
 //        messageProperties.setExpiration(delaultExprie);
+        com.bfxy.rabbit.api.Message message = (com.bfxy.rabbit.api.Message) o;
+        messageProperties.setDelay(message.getDelayMills());
         return this.messageConverter.toMessage(o, messageProperties);
     }
 

@@ -1,36 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25fd77bf-9c7e-4c4e-a81b-110519b4eab8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/config/database/BrokerMessageConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/config/database/RabbitProducerDataSourceConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/config/database/RabbitProducerMyBatisConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/config/database/RabbitProducerMybatisMapperScanerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/task/RetryMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/resources/rabbit-producer-message-schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/resources/rabbit-producer-message.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbit-task/src/main/java/com/bfxy/rabbit/task/annotation/ElasticJobConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbit-task/src/main/java/com/bfxy/rabbit/task/annotation/EnableElasticJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbit-task/src/main/java/com/bfxy/rabbit/task/autoconfigure/JobParserAutoConfigurartion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbit-task/src/main/java/com/bfxy/rabbit/task/autoconfigure/JobZookeeperProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbit-task/src/main/java/com/bfxy/rabbit/task/enums/ElasticJobTypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbit-task/src/main/java/com/bfxy/rabbit/task/parser/ElasticJobConfParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbit-task/src/main/resources/META-INF/spring.factories" afterDir="false" />
+    <list default="true" id="25fd77bf-9c7e-4c4e-a81b-110519b4eab8" name="Default Changelist" comment="feat(rabbit-parent): rabbitmq编写可好性投递&#10;&#10;review:mdx">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit-api/rabbit-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-api/rabbit-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit-api/src/main/java/com/bfxy/rabbit/api/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-api/src/main/java/com/bfxy/rabbit/api/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit-api/src/main/java/com/bfxy/rabbit/api/MessageBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-api/src/main/java/com/bfxy/rabbit/api/MessageBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit-common/rabbit-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-common/rabbit-common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit-core-producer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-core-producer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit-core-producer/rabbit-core-producer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-core-producer/rabbit-core-producer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/autoconfigure/RabbitProducerAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/autoconfigure/RabbitProducerAutoConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/mapper/BrokerMessageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/mapper/BrokerMessageMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/mapping/BrokerMessageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/mapping/BrokerMessageMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/service/IMessageStoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/service/IMessageStoreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/service/impl/MessageStoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/service/impl/MessageStoreServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit-parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-parent.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit-task/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-task/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit-task/rabbit-task.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-task/rabbit-task.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,22 +170,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="343" y="66" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1650978771786" />
-    <state width="1322" height="41" key="GridCell.Tab.0.bottom" timestamp="1651503755670">
+    <state width="1322" height="267" key="GridCell.Tab.0.bottom" timestamp="1651590684491">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="41" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1651503755670" />
-    <state width="1322" height="41" key="GridCell.Tab.0.center" timestamp="1651503755669">
+    <state width="1322" height="267" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1651590684491" />
+    <state width="1322" height="267" key="GridCell.Tab.0.center" timestamp="1651590684490">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="41" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1651503755669" />
-    <state width="1322" height="41" key="GridCell.Tab.0.left" timestamp="1651503755669">
+    <state width="1322" height="267" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1651590684490" />
+    <state width="1322" height="267" key="GridCell.Tab.0.left" timestamp="1651590684490">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="41" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1651503755669" />
-    <state width="1322" height="41" key="GridCell.Tab.0.right" timestamp="1651503755670">
+    <state width="1322" height="267" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1651590684490" />
+    <state width="1322" height="267" key="GridCell.Tab.0.right" timestamp="1651590684490">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="41" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1651503755670" />
+    <state width="1322" height="267" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1651590684490" />
     <state x="343" y="64" key="RollbackChangesDialog" timestamp="1650552661306">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -245,9 +218,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1650985456575" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1651501652787">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1651592212156">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1651501652787" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1651592212156" />
   </component>
 </project>
