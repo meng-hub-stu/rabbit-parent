@@ -1,6 +1,7 @@
 package com.bfxy.rabbit.producer.broker;
 
 import com.bfxy.rabbit.api.Message;
+import com.bfxy.rabbit.api.SendCallback;
 
 /**
  * 不同类型发送不同的消息
@@ -23,8 +24,9 @@ public interface RabbitBroker {
     /**
      * 发送可靠性消息
      * @param message 消息内容
+     * @param sendCallback 回调消息
      */
-    void reliantSend(Message message);
+    void reliantSend(Message message, SendCallback sendCallback);
 
     /**
      * 批量发送消息

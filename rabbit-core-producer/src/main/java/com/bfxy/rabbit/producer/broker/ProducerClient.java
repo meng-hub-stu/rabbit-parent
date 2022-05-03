@@ -35,7 +35,7 @@ public class ProducerClient implements MessageProducer {
                 rabbitBroker.confirmSend(message);
                 break;
             case MessageType.RELIANT:
-                rabbitBroker.reliantSend(message);
+                rabbitBroker.reliantSend(message, null);
                 break;
             default:
                 break;
@@ -54,7 +54,8 @@ public class ProducerClient implements MessageProducer {
 
     @Override
     public void send(Message message, SendCallback sendCallback) throws MessageRunTimeException {
-
+        //存储当前消息是否需要sendCallBack
+        rabbitBroker.reliantSend(message, sendCallback);
     }
 
 }

@@ -2,6 +2,7 @@ package com.bfxy.rabbit.producer.broker;
 
 import com.bfxy.rabbit.api.Message;
 import com.bfxy.rabbit.api.MessageType;
+import com.bfxy.rabbit.api.SendCallback;
 import com.bfxy.rabbit.producer.constant.BrokerMessageConst;
 import com.bfxy.rabbit.producer.constant.BrokerMessageStatus;
 import com.bfxy.rabbit.producer.entity.BrokerMessage;
@@ -33,17 +34,17 @@ public class RabbitBrokerImpl implements RabbitBroker{
     @Override
     public void rapidSend(Message message) {
         message.setMessageType(MessageType.RAPID);
-        sendKernel(message);
+        sendKernel(message, null);
     }
 
     @Override
     public void confirmSend(Message message) {
         message.setMessageType(MessageType.CONFIRM);
-        sendKernel(message);
+        sendKernel(message, null);
     }
 
     @Override
-    public void reliantSend(Message message) {
+    public void reliantSend(Message message, SendCallback sendCallback) {
         message.setMessageType(MessageType.RELIANT);
         //在发送之前，应该先存储一份消息内容，
         BrokerMessage bm = messageStoreService.selectByPrimaryKey(message.getMessageId());
@@ -60,14 +61,14 @@ public class RabbitBrokerImpl implements RabbitBroker{
             brokerMessage.setMessage(message);
             messageStoreService.insert(brokerMessage);
         }
-        sendKernel(message);
+        sendKernel(message, sendCallback);
     }
 
     @Override
     public void sendMessages() {
         List<Message> messages = MessageHolder.clear();
         messages.forEach(message -> {
-            sendKernel(message);
+            sendKernel(message, null);
         });
     }
 
@@ -75,7 +76,7 @@ public class RabbitBrokerImpl implements RabbitBroker{
      * 异步发送消息
      * @param message 消息内容
      */
-    private void sendKernel(Message message) {
+    private void sendKernel(Message message, SendCallback sendCallback) {
         AsyncBaseQueue.submit(() -> {
             CorrelationData correlationData = new CorrelationData(String.format("%s#%s#%s",
                     message.getMessageId(),
@@ -83,7 +84,7 @@ public class RabbitBrokerImpl implements RabbitBroker{
                     message.getMessageType()));
             String topic = message.getTopic();
             String routingKey = message.getRoutingKey();
-            RabbitTemplate rabbitTemplate = rabbitContainer.getTemplate(message);
+            RabbitTemplate rabbitTemplate = rabbitContainer.getTemplate(message, sendCallback);
             rabbitTemplate.convertAndSend(topic, routingKey, message, correlationData);
             log.info("#RabbitBrokerImpl.sendKernel# send to rabbitmq, messageId: {}", message.getMessageId());
         });
