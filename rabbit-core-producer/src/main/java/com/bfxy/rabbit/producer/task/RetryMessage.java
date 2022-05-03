@@ -55,7 +55,7 @@ public class RetryMessage implements DataflowJob<BrokerMessage> {
                 log.info("更新失败数据->{}", v.getMessageId());
             } else {
                 messageStoreService.updateTryCount(v.getMessageId());
-                rabbitBroker.reliantSend(v.getMessage());
+                rabbitBroker.reliantSend(v.getMessage(), null);
                 log.info("重新发送数据-{}", v.getMessageId());
             }
         });
