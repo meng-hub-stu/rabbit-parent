@@ -67,8 +67,9 @@ public class RabbitTemplateContainer implements RabbitTemplate.ConfirmCallback, 
         String messageType = message.getMessageType();
         if (!MessageType.RAPID.equals(messageType)) {
             newTemplate.setConfirmCallback(this);
-            newTemplate.setReturnCallback(this);
         }
+        newTemplate.setMandatory(true);
+        newTemplate.setReturnCallback(this);
         rabbitMap.putIfAbsent(topic, newTemplate);
         return rabbitMap.get(topic);
     }
@@ -93,10 +94,7 @@ public class RabbitTemplateContainer implements RabbitTemplate.ConfirmCallback, 
 
     @Override
     public void returnedMessage(org.springframework.amqp.core.Message message, int i, String s, String s1, String s2) {
-        log.info("返回确认消息");
-        if (i > 0) {
-            log.info("returnedMessage回调成功");
-        }
+        log.error("发生错误");
     }
 
 }
