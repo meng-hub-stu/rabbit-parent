@@ -2,7 +2,6 @@ package com.bfxy.rabbit.producer.broker;
 
 import com.bfxy.rabbit.api.Message;
 import com.bfxy.rabbit.api.MessageType;
-import com.bfxy.rabbit.api.SendCallback;
 import com.bfxy.rabbit.api.exception.MessageRunTimeException;
 import com.bfxy.rabbit.common.convert.GenericMessageConverter;
 import com.bfxy.rabbit.common.convert.RabbitMessageConverter;
@@ -46,7 +45,7 @@ public class RabbitTemplateContainer implements RabbitTemplate.ConfirmCallback, 
     private SerializerFactory serializerFeature = JacksonSerializerFactory.INSTANCE;
 
 
-    public RabbitTemplate getTemplate(Message message, SendCallback sendCallback) throws MessageRunTimeException {
+    public RabbitTemplate getTemplate(Message message) throws MessageRunTimeException {
         Preconditions.checkNotNull(message);
         String topic = message.getTopic();
         RabbitTemplate rabbitTemplate = rabbitMap.get(topic);
@@ -68,15 +67,7 @@ public class RabbitTemplateContainer implements RabbitTemplate.ConfirmCallback, 
         String messageType = message.getMessageType();
         if (!MessageType.RAPID.equals(messageType)) {
             newTemplate.setConfirmCallback(this);
-        }
-        //是否需要回调处理
-        if (sendCallback != null) {
             newTemplate.setReturnCallback(this);
-            if (MessageHolder.querySendCalBack()){
-                sendCallback.onSuccess();
-            } else {
-                sendCallback.onFailure();
-            }
         }
         rabbitMap.putIfAbsent(topic, newTemplate);
         return rabbitMap.get(topic);
@@ -102,8 +93,9 @@ public class RabbitTemplateContainer implements RabbitTemplate.ConfirmCallback, 
 
     @Override
     public void returnedMessage(org.springframework.amqp.core.Message message, int i, String s, String s1, String s2) {
+        log.info("返回确认消息");
         if (i > 0) {
-            MessageHolder.addSendCalBack();
+            log.info("returnedMessage回调成功");
         }
     }
 

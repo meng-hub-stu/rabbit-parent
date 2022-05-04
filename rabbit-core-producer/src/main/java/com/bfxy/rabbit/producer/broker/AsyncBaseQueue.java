@@ -15,6 +15,15 @@ public class AsyncBaseQueue {
 
     private static final int QUEUE_SIZE = 10000;
 
+    public static ExecutorService executor =
+            new ThreadPoolExecutor(20,
+                    200,
+                    60L,
+                    TimeUnit.SECONDS,
+                    new ArrayBlockingQueue<>(20),
+                    Executors.defaultThreadFactory(),
+                    new ThreadPoolExecutor.AbortPolicy());
+
     private static ExecutorService sendAsync =
             new ThreadPoolExecutor(THREAD_SIZE,
                     THREAD_SIZE,
@@ -36,7 +45,7 @@ public class AsyncBaseQueue {
                         }
                     });
     public static void submit(Runnable runnable) {
-        sendAsync.submit(runnable);
+        executor.submit(runnable);
     }
 
 }

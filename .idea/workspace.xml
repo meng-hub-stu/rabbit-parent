@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25fd77bf-9c7e-4c4e-a81b-110519b4eab8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/broker/RabbitBrokerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/broker/RabbitBrokerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/broker/AsyncBaseQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/broker/AsyncBaseQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/broker/MessageHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/broker/MessageHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/broker/RabbitTemplateContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/broker/RabbitTemplateContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/task/RetryMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/task/RetryMessage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,6 +91,7 @@
       <workItem from="1651368739843" duration="12372000" />
       <workItem from="1651418900621" duration="1940000" />
       <workItem from="1651476304504" duration="14158000" />
+      <workItem from="1651670614462" duration="3611000" />
     </task>
     <task id="LOCAL-00001" summary="feat(rabbit-parent): 构建rabbit项目&#10;&#10;review:mdx">
       <created>1650205983227</created>
@@ -130,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651595796940</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat(rabbit-parent): rabbitmq编写可好性投递&#10;&#10;review:mdx">
+      <created>1651598718174</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651598718174</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,10 +181,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="148" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1650982207273" />
-    <state x="192" y="0" key="CommitChangelistDialog2" timestamp="1651595796609">
+    <state x="192" y="0" key="CommitChangelistDialog2" timestamp="1651598717859">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="192" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1651595796609" />
+    <state x="192" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1651598717859" />
+    <state x="135" y="54" key="DiffContextDialog" timestamp="1651602767999">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="135" y="54" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1651602767999" />
     <state x="463" y="104" key="FileChooserDialogImpl" timestamp="1651309168838">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -185,26 +201,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="343" y="66" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1650978771786" />
-    <state width="1322" height="157" key="GridCell.Tab.0.bottom" timestamp="1651598547507">
+    <state width="1322" height="260" key="GridCell.Tab.0.bottom" timestamp="1651672634260">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="157" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1651598547507" />
-    <state width="1322" height="157" key="GridCell.Tab.0.center" timestamp="1651598547507">
+    <state width="1322" height="260" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1651672634260" />
+    <state width="1322" height="260" key="GridCell.Tab.0.center" timestamp="1651672634259">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="157" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1651598547507" />
-    <state width="1322" height="157" key="GridCell.Tab.0.left" timestamp="1651598547507">
+    <state width="1322" height="260" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1651672634259" />
+    <state width="1322" height="260" key="GridCell.Tab.0.left" timestamp="1651672634259">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="157" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1651598547507" />
-    <state width="1322" height="157" key="GridCell.Tab.0.right" timestamp="1651598547507">
+    <state width="1322" height="260" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1651672634259" />
+    <state width="1322" height="260" key="GridCell.Tab.0.right" timestamp="1651672634260">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="157" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1651598547507" />
-    <state x="343" y="64" key="RollbackChangesDialog" timestamp="1650552661306">
+    <state width="1322" height="260" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1651672634260" />
+    <state x="343" y="64" key="RollbackChangesDialog" timestamp="1651602769067">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="343" y="64" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1650552661306" />
+    <state x="343" y="64" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1651602769067" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1651417890791">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -213,10 +229,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="404" y="94" width="540" height="524" key="StructurePopup/0.0.1366.728@0.0.1366.728" timestamp="1650980879418" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1651595802079">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1651598723860">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1651595802079" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1651598723860" />
     <state x="385" y="96" width="748" height="536" key="find.popup" timestamp="1651500862744">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -1,12 +1,9 @@
 package com.bfxy.rabbit.producer.broker;
 
 import com.bfxy.rabbit.api.Message;
-import com.bfxy.rabbit.api.SendCallback;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * @Author Mengdexin
@@ -23,7 +20,6 @@ public class MessageHolder {
             return new MessageHolder();
         }
     };
-    public static final ThreadLocal<Boolean> callBackThreadLocal = new ThreadLocal<>();
 
     public static void add(Message message) {
         holder.get().messages.add(message);
@@ -33,16 +29,6 @@ public class MessageHolder {
         List<Message> messages = Lists.newArrayList(holder.get().messages);
         holder.remove();
         return messages;
-    }
-
-    public static void addSendCalBack(){
-        callBackThreadLocal.set(true);
-    }
-
-    public static boolean querySendCalBack(){
-        boolean sendCarBack = callBackThreadLocal.get();
-        callBackThreadLocal.remove();
-        return sendCarBack;
     }
 
 }

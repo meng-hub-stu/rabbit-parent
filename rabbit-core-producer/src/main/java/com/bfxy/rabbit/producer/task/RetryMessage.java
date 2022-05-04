@@ -9,7 +9,6 @@ import com.dangdang.ddframe.job.api.ShardingContext;
 import com.dangdang.ddframe.job.api.dataflow.DataflowJob;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -55,7 +54,7 @@ public class RetryMessage implements DataflowJob<BrokerMessage> {
                 log.info("更新失败数据->{}", v.getMessageId());
             } else {
                 messageStoreService.updateTryCount(v.getMessageId());
-                rabbitBroker.reliantSend(v.getMessage(), null);
+                rabbitBroker.reliantSend(v.getMessage());
                 log.info("重新发送数据-{}", v.getMessageId());
             }
         });
