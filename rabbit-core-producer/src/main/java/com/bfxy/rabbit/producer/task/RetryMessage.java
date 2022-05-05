@@ -26,7 +26,8 @@ import static com.bfxy.rabbit.producer.constant.BrokerMessageStatus.SENDING;
         cron = "0/5 * * * * ?",
         shardingTotalCount = 1,
         streamingProcess = false,
-        overwrite = true
+        overwrite = true,
+        eventTraceRdbDataSource = "rabbitProducerDataSource"
 )
 @Component
 @Slf4j
