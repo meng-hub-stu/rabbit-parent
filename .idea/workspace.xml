@@ -1,9 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="25fd77bf-9c7e-4c4e-a81b-110519b4eab8" name="Default Changelist" comment="">
+    <list default="true" id="25fd77bf-9c7e-4c4e-a81b-110519b4eab8" name="Default Changelist" comment="feat(rabbit-parent): rabbitmq编写可好性投递&#10;&#10;review:mdx">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_dangdang_elastic_job_common_core_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_dangdang_elastic_job_lite_core_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_dangdang_elastic_job_lite_spring_2_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_7_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_0_9_94.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_client_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_framework_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_recipes_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_quartz_scheduler_quartz_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_1_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/broker/RabbitTemplateContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/broker/RabbitTemplateContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbit-api/rabbit-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-api/rabbit-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbit-common/rabbit-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-common/rabbit-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbit-core-producer/rabbit-core-producer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-core-producer/rabbit-core-producer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/task/RetryMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/task/RetryMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbit-parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-parent.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbit-task/rabbit-task.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit-task/rabbit-task.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,17 +83,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/rabbit-core-producer/src/main/java/com/bfxy/rabbit/producer/config/database" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rabbit-test" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -64,6 +107,9 @@
       <recent name="D:\java_stu\idea\workspace2\rabbit-parent\rabbit-task\src\main\java\com\bfxy\rabbit\task\annotation" />
       <recent name="D:\java_stu\idea\workspace2\rabbit-parent\rabbit-core-producer\src\main\java\com\bfxy\rabbit\producer" />
     </key>
+  </component>
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -87,6 +133,12 @@
       <workItem from="1651418900621" duration="1940000" />
       <workItem from="1651476304504" duration="14158000" />
       <workItem from="1651670614462" duration="7323000" />
+      <workItem from="1653147127179" duration="30000" />
+      <workItem from="1653331529837" duration="835000" />
+      <workItem from="1653334170127" duration="2193000" />
+      <workItem from="1653360303607" duration="205000" />
+      <workItem from="1653363037671" duration="375000" />
+      <workItem from="1653366770409" duration="6221000" />
     </task>
     <task id="LOCAL-00001" summary="feat(rabbit-parent): 构建rabbit项目&#10;&#10;review:mdx">
       <created>1650205983227</created>
@@ -150,6 +202,18 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
@@ -159,14 +223,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="feat(rabbit-parent): rabbitmq编写可好性投递&#10;&#10;review:mdx" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="582" y="259" width="402" height="210" key="#Custom_Plugin_Repositories" timestamp="1650204696206">
+    <state x="582" y="259" width="402" height="210" key="#Custom_Plugin_Repositories" timestamp="1653359993665">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="582" y="259" width="402" height="210" key="#Custom_Plugin_Repositories/0.0.1366.728@0.0.1366.728" timestamp="1650204696206" />
-    <state x="454" y="80" key="#HTTP_Proxy" timestamp="1650204699170">
+    <state x="582" y="259" width="402" height="210" key="#Custom_Plugin_Repositories/0.0.1366.728@0.0.1366.728" timestamp="1653359993665" />
+    <state x="454" y="80" key="#HTTP_Proxy" timestamp="1653359988700">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="454" y="80" key="#HTTP_Proxy/0.0.1366.728@0.0.1366.728" timestamp="1650204699170" />
+    <state x="454" y="80" key="#HTTP_Proxy/0.0.1366.728@0.0.1366.728" timestamp="1653359988700" />
     <state x="163" y="0" key="#Project_Structure" timestamp="1651484315058">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -183,18 +247,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="148" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1650982207273" />
-    <state x="192" y="0" key="CommitChangelistDialog2" timestamp="1651674710813">
+    <state x="192" y="0" key="CommitChangelistDialog2" timestamp="1653373639094">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="192" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1651674710813" />
-    <state x="135" y="54" key="DiffContextDialog" timestamp="1651602767999">
+    <state x="192" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1653373639094" />
+    <state x="135" y="54" key="DiffContextDialog" timestamp="1653373290822">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="135" y="54" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1651602767999" />
-    <state x="463" y="104" key="FileChooserDialogImpl" timestamp="1651309168838">
+    <state x="135" y="54" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1653373290822" />
+    <state x="463" y="104" key="FileChooserDialogImpl" timestamp="1653334483783">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1651309168838" />
+    <state x="463" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1653334483783" />
+    <state width="192" height="311" key="Git.Branch.Popup" timestamp="1653367443115">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="192" height="311" key="Git.Branch.Popup/0.0.1366.728@0.0.1366.728" timestamp="1653367443115" />
     <state x="543" y="260" key="Github.ShareDialog" timestamp="1650978757207">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -203,30 +271,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="343" y="66" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1650978771786" />
-    <state width="1322" height="43" key="GridCell.Tab.0.bottom" timestamp="1651678557319">
+    <state width="1322" height="264" key="GridCell.Tab.0.bottom" timestamp="1653373577750">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="43" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1651678557319" />
-    <state width="1322" height="43" key="GridCell.Tab.0.center" timestamp="1651678557319">
+    <state width="1322" height="264" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1653373577750" />
+    <state width="1322" height="264" key="GridCell.Tab.0.center" timestamp="1653373577749">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="43" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1651678557319" />
-    <state width="1322" height="43" key="GridCell.Tab.0.left" timestamp="1651678557319">
+    <state width="1322" height="264" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1653373577749" />
+    <state width="1322" height="264" key="GridCell.Tab.0.left" timestamp="1653373577749">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="43" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1651678557319" />
-    <state width="1322" height="43" key="GridCell.Tab.0.right" timestamp="1651678557319">
+    <state width="1322" height="264" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1653373577749" />
+    <state width="1322" height="264" key="GridCell.Tab.0.right" timestamp="1653373577750">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="43" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1651678557319" />
+    <state width="1322" height="264" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1653373577750" />
     <state x="343" y="64" key="RollbackChangesDialog" timestamp="1651602769067">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="343" y="64" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1651602769067" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1651417890791">
+    <state x="184" y="0" key="SettingsEditor" timestamp="1653374179924">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1651417890791" />
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1653374179924" />
     <state x="404" y="94" width="540" height="524" key="StructurePopup" timestamp="1650980879418">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
