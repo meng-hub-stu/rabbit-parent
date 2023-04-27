@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bfxy.rabbit.producer.mapper.BrokerMessageMapper" >
+    <sql id="Base_Column_list">
+        message_id, message, try_count, status, next_retry, create_time, update_time
+    </sql>
+    <resultMap id="BaseResultMap" type="com.bfxy.rabbit.producer.entity.BrokerMessage">
+        <id column="message_id" property="messageId" jdbcType="VARCHAR" />
+        <result column="message" property="message" jdbcType="VARCHAR" typeHandler="com.bfxy.rabbit.common.mybatis.handler.MessageJsonTypeHandler" />
+        <result column="try_count" property="tryCount" jdbcType="INTEGER" />
+        <result column="status" property="status" jdbcType="VARCHAR" />
+        <result column="next_retry" property="nextRetry" jdbcType="TIMESTAMP" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_list"/>
+         from broker_message
+         where message_id = #{messageId}
+    </select>
+    <insert id="insert" parameterType="com.bfxy.rabbit.producer.entity.BrokerMessage">
+         insert into broker_message (message_id, message, try_count,
+          status, next_retry, create_time,
+          update_time)
+        values (#{record.messageId,jdbcType=VARCHAR}, #{record.message,jdbcType=VARCHAR, typeHandler=com.bfxy.rabbit.common.mybatis.handler.MessageJsonTypeHandler}, #{record.tryCount,jdbcType=INTEGER},
+          #{record.status,jdbcType=VARCHAR}, #{record.nextRetry,jdbcType=TIMESTAMP}, #{record.createTime,jdbcType=TIMESTAMP},
+          #{record.updateTime,jdbcType=TIMESTAMP})
+    </insert>
+    <update id="updateMessageStatus">
+          update broker_message bm
+            set bm.status = #{code,jdbcType=VARCHAR},
+                bm.update_time = #{date, jdbcType=TIMESTAMP}
+            where bm.message_id = #{messageId,jdbcType=VARCHAR}
+    </update>
+    <select id="selectFailMessage" resultMap="BaseResultMap">
+        <![CDATA[
+        select * from broker_message
+        where status = #{status}
+        and next_retry < sysdate();
+         ]]>
+    </select>
+    <update id="updateTryCount">
+        <![CDATA[
+        update broker_message
+            set try_count = try_count + 1,
+                update_time = sysdate()
+        where message_id = #{messageId};
+         ]]>
+    </update>
+
+</mapper>
